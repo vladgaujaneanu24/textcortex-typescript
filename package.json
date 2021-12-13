@@ -1,16 +1,15 @@
 {
-  "name": "textcortex",
+  "name": "textcortex-typescript",
   "version": "1.0.0",
   "description": "Generate product descriptions, blogs, ads and more using GPT architecture with a single request to TextCortex API a.k.a HemingwAI",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
+    "prepublishOnly": "npm run lint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
@@ -27,6 +26,7 @@
   "homepage": "https://github.com/vladgaujaneanu24/textcortex-typescript#readme",
   "devDependencies": {
     "@types/jest": "^27.0.3",
+    "axios": "^0.24.0",
     "jest": "^27.4.4",
     "prettier": "^2.5.1",
     "ts-jest": "^27.1.1",
